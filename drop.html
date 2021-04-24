@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------------------ Google Font link-------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+    <!------------------------ Font Awesome link-------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    
+     <!------------------------ Style.Css link-------------------->
+    <link rel="stylesheet" href="Style.css">
+    <title>Playlist</title>
+</head>
+<body>
+  
+<div class="main-div">
+
+  <div class="music_contatainer">
+    <h1 class="title">Ayon Rahman Holud</h1>
+    <h2 id="artist">The Playlist</h2>
+    <div class="img-container">
+      <img src="img/music.jpg" alt="">
+    </div>
+
+    <audio src="img/12345.mp3"></audio>
+
+    <!------------------------Controls------------------>
+    <div class="music-controls">
+
+      <i class="fas fa-backward" id="prev" title="Previous"></i>
+      
+
+      <i class="fas fa-play main-button" id="play" title="Play"></i>
+
+      <i class="fas fa-forward" id="next" title="Next"></i>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+
+  const music = document.querySelector("audio");
+  const play = document.getElementById("play");
+  play.addEventlistener('click', () => {
+    music.play();
+    play.classList.repleace("fa-play", "fa-pause")
+  });
+</script>
+
+</body>
+</html>
